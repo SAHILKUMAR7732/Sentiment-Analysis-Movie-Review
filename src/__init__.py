@@ -4,4 +4,4 @@ Package initialization exposing core modules.
 """
 
 __version__ = "1.0.0"
-__author__ = "NLP Engineering Team"
+__author__ = "SAHIL KUMAR"

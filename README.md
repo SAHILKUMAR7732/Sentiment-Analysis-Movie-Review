@@ -1,5 +1,9 @@
 # 🎬 Sentiment Analysis on Movie Reviews using Deep Learning
 
+**Author:** [SAHIL KUMAR](https://github.com/SAHILKUMAR7732)  
+**Date:** October 2026  
+**Repository Version:** 1.0.0  
+
 An enterprise-ready, reproducible Natural Language Processing (NLP) system comparing **TF-IDF + Logistic Regression** with fine-tuned **DistilBERT** on the Stanford IMDb 50,000 Movie Reviews dataset. Features include leak-free stratified data partitioning, automated class-imbalance handling, multi-metric benchmarking, Transformer self-attention visualization, and an interactive Streamlit web dashboard.
 
 ---

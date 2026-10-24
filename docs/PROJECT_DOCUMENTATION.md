@@ -1,7 +1,7 @@
 # Project Documentation: Movie Review Sentiment Analysis using Deep Learning
 
 **Project Title:** End-to-End Sentiment Analysis on Movie Reviews using TF-IDF and Fine-Tuned DistilBERT  
-**Author:** NLP & Machine Learning Engineering Team  
+**Author:** SAHIL KUMAR  
 **Date:** October 2026  
 **Repository Version:** 1.0.0  
 
