@@ -1,0 +1,66 @@
+# Sentiment Analysis Pipeline Configuration
+
+dataset:
+  name: "stanfordnlp/imdb"
+  source: "huggingface" # Hugging Face datasets library identifier
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  val_size: 0.15        # 15% stratified split from train set for validation
+  random_seed: 42
+  sample_size: null     # Set to an integer (e.g., 2000) for fast CPU/dev mode, or null for all ~50k reviews
+
+preprocessing:
+  max_length: 256
+  clean_html: true
+  normalize_whitespace: true
+  lower_for_tfidf: true
+  preserve_casing_for_transformer: true
+
+baseline:
+  model_type: "logistic_regression"
+  vectorizer: "tfidf"
+  max_features: 10000
+  ngram_range: [1, 2]
+  c_param: 1.0
+  class_weight: "balanced"  # Supports "balanced" or null
+  save_dir: "models/baseline"
+
+transformer:
+  model_name_or_path: "distilbert-base-uncased"
+  num_labels: 2
+  id2label:
+    0: "Negative"
+    1: "Positive"
+  label2id:
+    "Negative": 0
+    "Positive": 1
+  max_length: 256
+  train_batch_size: 8
+  eval_batch_size: 8
+  learning_rate: 2.0e-5
+  num_train_epochs: 2
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  gradient_accumulation_steps: 2
+  logging_steps: 50
+  save_total_limit: 1
+  save_dir: "models/distilbert-sentiment"
+
+class_imbalance:
+  strategy: "auto"       # "auto", "weighted_loss", or "none"
+  threshold_ratio: 1.2   # Trigger weighted loss if majority/minority ratio exceeds this threshold
+
+early_stopping:
+  enabled: true
+  patience: 2
+  threshold: 0.001
+
+output:
+  reports_dir: "reports"
+  figures_dir: "reports/figures"
+  metrics_dir: "reports/metrics"
+  artifacts_dir: "artifacts"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

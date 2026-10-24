@@ -1,0 +1,24 @@
+[
+  {
+    "model": "TF-IDF + Logistic Regression",
+    "accuracy": 0.896,
+    "precision": 0.9125,
+    "recall": 0.876,
+    "f1": 0.8938775510204081,
+    "macro_f1": 0.8959583833533413,
+    "weighted_f1": 0.8959583833533413,
+    "roc_auc": 0.959888,
+    "num_test_samples": 500
+  },
+  {
+    "model": "DistilBERT Fine-Tuned",
+    "accuracy": 0.47,
+    "precision": 0.47491638795986624,
+    "recall": 0.568,
+    "f1": 0.517304189435337,
+    "macro_f1": 0.4648605204382893,
+    "weighted_f1": 0.4648605204382893,
+    "roc_auc": 0.489568,
+    "num_test_samples": 500
+  }
+]

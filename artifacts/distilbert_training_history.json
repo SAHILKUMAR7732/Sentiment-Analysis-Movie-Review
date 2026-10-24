@@ -1,0 +1,43 @@
+{
+  "train_runtime_seconds": 48.5203,
+  "train_samples_per_second": 4.122,
+  "total_flos": 13246739865600.0,
+  "train_loss": 1.2833788735525948,
+  "log_history": [
+    {
+      "eval_loss": 0.6951500177383423,
+      "eval_accuracy": 0.48,
+      "eval_precision": 0.42857142857142855,
+      "eval_recall": 0.5454545454545454,
+      "eval_f1": 0.48,
+      "eval_runtime": 1.2538,
+      "eval_samples_per_second": 19.94,
+      "eval_steps_per_second": 3.19,
+      "epoch": 1.0,
+      "step": 7
+    },
+    {
+      "eval_loss": 0.6878643035888672,
+      "eval_accuracy": 0.6,
+      "eval_precision": 0.6,
+      "eval_recall": 0.2727272727272727,
+      "eval_f1": 0.375,
+      "eval_runtime": 1.2536,
+      "eval_samples_per_second": 19.943,
+      "eval_steps_per_second": 3.191,
+      "epoch": 2.0,
+      "step": 14
+    },
+    {
+      "train_runtime": 48.5203,
+      "train_samples_per_second": 4.122,
+      "train_steps_per_second": 0.289,
+      "total_flos": 13246739865600.0,
+      "train_loss": 1.2833788735525948,
+      "epoch": 2.0,
+      "step": 14
+    }
+  ],
+  "best_metric": 0.48,
+  "best_model_checkpoint": "models\\distilbert-sentiment\\checkpoints\\checkpoint-7"
+}
